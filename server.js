@@ -6,7 +6,7 @@ var express = require('express')
 
 app.set('port', (process.env.PORT || 8080));
 
-app.use('/public', express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get('/whoami', function (req, res) {
 
