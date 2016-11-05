@@ -3,6 +3,8 @@ var express = require('express')
     , UAParser = require('ua-parser-js')
     , parser = new UAParser();
     
+app.set('port', 5000);
+    
 app.get('/', function (req, res) {
   
   var language = req.headers["accept-language"].split(",")[0];
@@ -32,6 +34,6 @@ app.get('/', function (req, res) {
 
 });
 
-app.listen(5000, function () {
-  console.log('App listening on port 5000!');
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
