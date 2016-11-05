@@ -3,7 +3,7 @@ var express = require('express')
     , UAParser = require('ua-parser-js')
     , parser = new UAParser();
     
-app.set('port', 5000);
+app.set('port', (process.env.PORT || 5000));
     
 app.get('/', function (req, res) {
   
