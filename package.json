@@ -1,7 +1,7 @@
 {
   "name": "request-header-parser-microservice",
   "version": "1.0.0",
-  "description": "return IP address, language and operating system for my browser",
+  "description": "returns IP address, language and operating system for browser",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "Arshad Khan",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "ua-parser-js": "^0.7.10"
   }
 }
