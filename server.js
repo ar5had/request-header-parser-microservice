@@ -2,10 +2,12 @@ var express = require('express')
     , app = express()
     , path = require("path")
     , UAParser = require('ua-parser-js')
+    , favicon = require("serve-favicon")
     , parser = new UAParser();
 
 app.set('port', (process.env.PORT || 8080));
 
+app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get('/whoami', function (req, res) {
